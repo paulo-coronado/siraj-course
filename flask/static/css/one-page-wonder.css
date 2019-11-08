@@ -127,6 +127,10 @@ header.masthead .bg-circle-4 {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .bg-primary {
   background-color: #ee0979 !important;
 }
@@ -161,4 +165,18 @@ header.masthead .bg-circle-4 {
 
 .btn-secondary:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+}
+
+.btn-third {
+  background-color: #1eb954;
+  border-color: #1eb954;
+}
+
+.btn-third:active, .btn-third:focus, .btn-third:hover {
+  background-color: #178d40 !important;
+  border-color: #178d40 !important;
+}
+
+.btn-third:focus {
+  box-shadow: 0 0 0 0.2rem rgba(30, 185, 84, 0.5);
 }
