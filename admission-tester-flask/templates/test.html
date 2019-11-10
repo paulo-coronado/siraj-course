@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Admission Tester</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/one-page-wonder.min.css') }}">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Admission Tester</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="masthead-content">
+      <div class="container">
+
+        <!-- NOTE devo adicionar validação do botão -->
+        <form style="background-color: white; padding: 50px; border-radius: 50px" id="form-predict">
+          <h2 style="margin-bottom: 5%;">
+            <center>Make a prediction of your graduate admission!</center>
+          </h2>
+          <div class="form-row">
+            <div class="form-group col-md-6 marginForm">
+              <label for="inputGRE">GRE Score</label>
+              <input type="text" class="form-control" id="inputGRE" placeholder="Input score" required>
+            </div>
+            <div class="form-group col-md-6 marginForm">
+              <label for="inputToefl">TOEFL Score</label>
+              <input type="text" class="form-control" id="inputToefl" placeholder="Input score" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4 marginForm">
+              <label for="inputUniRating">University Rating</label>
+              <input type="text" class="form-control" id="inputUniRating" placeholder="Input rating" required>
+            </div>
+            <div class="form-group col-md-4 marginForm">
+              <label for="inputSOP">Statement of Purpose Strength</label>
+              <input type="text" class="form-control" id="inputSOP" placeholder="Input strength" required>
+            </div>
+            <div class="form-group col-md-4 marginForm">
+              <label for="inputLOR">Letter of Recommendation Strength</label>
+              <input type="text" class="form-control" id="inputLOR" placeholder="Input strength" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCGPA">Undergraduate GPA</label>
+              <input type="text" class="form-control" id="inputCGPA" placeholder="Input average" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputResearh">Research Experience</label>
+
+              <select class="custom-select form-control" id="inputResearch" required>
+                <option value="">Choose one</option>
+                <option value="0">I do not have research experience</option>
+                <option value="1">I have research experience</option>
+              </select>
+              <div class="invalid-feedback">Example invalid custom select feedback</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+              <label class="form-check-label" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <!-- <button type="button" class="btn btn-success btn-lg"><b>Predict</b></button> -->
+            <!-- <input type="submit" class="btn btn-success btn-lg" style="border-radius: 10px;" value="Predict"> -->
+            <input value="Predict" class="btn btn-third btn-xl rounded-pill mt-5"
+              style="color: white; margin: 0 !important" type="submit">
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Admission Tester</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+  <!-- Application Scripts -->
+  <script src="../static/js/predict.js"></script>
+
+</body>
+
+</html>
